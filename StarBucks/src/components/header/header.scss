@@ -1,0 +1,24 @@
+@use '../../scss/reset';
+@use '../../scss/mixin';
+@use '../../scss/vars';
+
+.header{
+  padding: 30px 100px ;
+  background: vars.$background-color;
+  @include mixin.flex(row,flex-start,center,75px);
+  .Logo{
+    @include mixin.montserrat(37.6px,800,109%);
+    background: linear-gradient(to right top,#237249,#35C66B);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .nav{
+    &__list{
+      @include mixin.flex(row,center,center,75px);
+    }
+    &__link{
+      @include mixin.montserrat(19px,500,24px);
+      color: vars.$no-active-color;
+    }
+  }
+}
