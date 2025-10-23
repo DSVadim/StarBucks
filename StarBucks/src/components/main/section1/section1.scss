@@ -1,0 +1,64 @@
+@use "../../../scss/mixin";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+.section1{
+  @include mixin.flex(column,center,center,20px);
+  background: vars.$background-color;
+  &-container{
+    width: 100%;
+    @include mixin.flex(row,center,cente,50px);
+    &-block{
+      @include mixin.flex(column,center,flex-start,45px);
+      width: 35%;
+      &__title{
+        color: vars.$text-color;
+        @include mixin.montserrat(60px,800,109.8%);
+      }
+      &__title--span{
+        background: linear-gradient(to right top,#237249,#35C66B);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      &__subtitle{
+        color: vars.$no-active-color;
+        @include mixin.montserrat(20px,500,163.5%);
+      }
+      &-buttons{
+        @include mixin.flex(row,flex-start,center,45px);
+        &__btn1{
+          @include mixin.montserrat(24px,500,146.5%);
+          color: vars.$text-color;
+          background: linear-gradient(to right top,#237249,#35C66B);
+          padding: 15px 45px;
+          border-radius: 82.83px;
+        }
+        &__btn2{
+          @include mixin.montserrat(24px,500,146.5%);
+          padding: 15px 45px;
+          color: vars.$no-active-color;
+          border: 1px solid vars.$no-active-color;
+          border-radius: 82.83px;
+        }
+      }
+      &-cards{
+        @include mixin.flex(row,flex-start,center,25px);
+        &-card{
+          &__num{
+            color: vars.$text-color;
+            @include mixin.montserrat(62px,800,109.8%);
+          }
+          &__num--span{
+            background: linear-gradient(to right top,#237249,#35C66B);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+          &__txt{
+            width: 15%;
+            color: vars.$no-active-color;
+            @include mixin.montserrat(20px,500,163.5%);
+          }
+        }
+      }
+    }
+  }
+}
