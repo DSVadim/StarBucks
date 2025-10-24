@@ -1,0 +1,67 @@
+@use "../../../scss/mixin";
+@use "../../../scss/vars";
+@use "../../../scss/reset";
+.section3 {
+  padding: 50px 250px;
+  @include mixin.flex(column,center, flex-start,  20px);
+  background: vars.$background-color;
+
+  &-container {
+    width: 70%;
+    @include mixin.flex(row,flex-start,center, 100px);
+
+    &__title {
+      color: vars.$text-color;
+      @include mixin.montserrat(60px, 800, 109.8%);
+    }
+
+    &__title--span {
+      background: linear-gradient(to right top, #237249, #35C66B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__subtitle {
+      color: vars.$no-active-color;
+      @include mixin.montserrat(20px, 500, 163.5%);
+    }
+  }
+  &-cards{
+    @include mixin.flex(row,center,center,50px);
+    &-card{
+      padding: 5px 15px;
+      @include mixin.flex(column,center,center,10px);
+      border: 1px solid vars.$no-active-color;
+      &__img{
+        width: 262.09px;
+        height: 293.21px;
+      }
+      &__title{
+        color: vars.$text-color;
+        @include mixin.montserrat(32px,500,163.5%);
+      }
+      &__subtitle{
+        color: vars.$no-active-color;
+        @include mixin.montserrat(20px,500,163.5%);
+      }
+      &-texts{
+        @include mixin.flex(row,center,center,50px);
+        &__price{
+          color: vars.$text-color;
+          @include mixin.montserrat(32px,500,163.5%);
+        }
+        &__volume{
+          color: vars.$no-active-color;
+          @include mixin.montserrat(20px,500,163.5%);
+        }
+      }
+      &__btn{
+        @include mixin.montserrat(17.3px,500,146.5%);
+        color: vars.$text-color;
+        background: linear-gradient(to right top,#237249,#35C66B);
+        padding: 15px 35px;
+        border-radius: 59.72px;
+      }
+    }
+  }
+}
