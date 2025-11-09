@@ -1,3 +1,29 @@
 @use "../../../scss/mixin";
 @use "../../../scss/vars";
 @use "../../../scss/reset";
+.section4 {
+  padding: 50px 250px;
+  @include mixin.flex(column, center, flex-start, 20px);
+  background: vars.$background-color;
+
+  &-container {
+    @include mixin.flex(row, flex-end, center, 100px);
+
+    &__title {
+      color: vars.$text-color;
+      @include mixin.montserrat(60px, 800, 109.8%);
+    }
+
+    &__title--span {
+      background: linear-gradient(to right top, #237249, #35C66B);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &__subtitle {
+      color: vars.$no-active-color;
+      @include mixin.montserrat(20px, 500, 163.5%);
+      width: 50%;
+    }
+  }
+}
