@@ -7,7 +7,6 @@
   background: vars.$background-color;
 
   &-container {
-    width: 70%;
     @include mixin.flex(row,flex-start,center, 100px);
 
     &__title {
@@ -34,7 +33,7 @@
       border: 1px solid vars.$no-active-color;
       &__img{
         width: 262.09px;
-        height: 293.21px;
+        height: 243.21px;
       }
       &__title{
         color: vars.$text-color;
